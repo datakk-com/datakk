@@ -54,7 +54,7 @@ def myeval(s,g={},l={},debug=False):
         s=s.replace('__builtins__','') # safe-guard ;)
         if s[0]=='/': s = s[1:]
         #return str(tryx(lambda:eval(s,g,l),True)) # DEBUG: testing no str...
-        return tryx(lambda:eval(s,g,l),print)
+        return tryx(lambda:eval(s,g,l),True)
 
     # dict-come-dict-go, old and please try not to use...
     elif s[0]=='{':
